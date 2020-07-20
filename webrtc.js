@@ -41,7 +41,7 @@ function start() {
 
       // set up websocket and message all existing clients
       .then(() => {
-        serverConnection = new WebSocket('wss://vc-signaling-server.apps.us-east-1.starter.openshift-online.com/ws');
+        serverConnection = new WebSocket('wss://vc-signal-signaling-server.apps.us-east-1.starter.openshift-online.com/ws');
         serverConnection.onmessage = gotMessageFromServer;
         serverConnection.onopen = event => {
           serverConnection.send(JSON.stringify({ roomId: 'skg', 'displayName': localDisplayName, 'uuid': localUuid, 'dest': 'all' }));
