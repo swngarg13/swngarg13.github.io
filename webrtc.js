@@ -28,7 +28,7 @@ function start() {
       height: {max: 240},
       frameRate: {max: 30},
     },
-    audio: false,
+    audio: true,
   };
 
   // set up local video stream
